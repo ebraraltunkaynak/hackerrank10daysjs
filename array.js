@@ -1,10 +1,16 @@
 function getSecondLargest(nums) {
-    nums=new Set(nums);
-    nums=Array.from(nums);
-    nums.sort();
-    return nums[nums.length-2];
+    let first=nums[0];
+    let second=-1;
+    for(let i=0;  i<nums.length; i++){
+        if(nums[i]>first) {
+            second=first;
+            first=nums[i]
+        }
+            if(nums[i] > second && nums[i]<first){
+                second=nums[i];
+                
+            }
+    }   
+    return second;
     // Complete the function
-}
-function comparator(a,b){
-    return a-b;
 }
