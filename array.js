@@ -1,7 +1,10 @@
 function getSecondLargest(nums) {
-    
-    nums=nums.sort()
-
-    return nums[nums.indexOf(Math.max.apply(Math,nums))-1]
+    nums=new Set(nums);
+    nums=Array.from(nums);
+    nums.sort();
+    return nums[nums.length-2];
     // Complete the function
+}
+function comparator(a,b){
+    return a-b;
 }
