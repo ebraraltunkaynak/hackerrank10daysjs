@@ -20,6 +20,7 @@ process.stdin.on('end', _ => {
 
 function readLine() {
     return inputString[currentLine++];
+    aaaaaaaaaaa
 }
 
 /**
